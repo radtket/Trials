@@ -1,0 +1,304 @@
+@import "slick/slick";
+@import "slick/slick-theme";
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+@import "state";
+
+$visual-grid: true !global;
+$visual-grid-color: red !global;
+$visual-grid-index: front !global;
+
+html {
+    overflow: hidden;
+}
+.container {
+	@include outer-container;
+    position: relative;
+}
+
+#row{
+    @include span-columns(12);
+}
+
+#wrapper {
+    @include position;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+  background: $white;
+  z-index: 9999999999999999;
+}
+
+#top {
+    @include position(fixed, 0 0 null 0);
+    @include size(auto, 15px); 
+}
+
+#right {
+    @include position(fixed, 0 0 0 null);
+    @include size(15px, auto); 
+}
+
+#bottom {
+    @include position(fixed, null 0 0 0);
+    @include size(auto, 15px); 
+}
+
+#left {
+    @include position(fixed, 0 null 0 0);
+    @include size(15px, auto); 
+}
+
+
+// Hamburger Menu
+.hamburger-wrapper {
+    @include position(fixed, 25px null null 25px)
+    @include padding(0)
+    @include size(65px, auto); 
+    z-index: 999;
+}
+
+.inner-hamburger-wrapper {
+    @include size(100%, auto); 
+    @include padding(8px null);
+}
+
+.hamburger {
+    @include size(50%, 4px); 
+    @include margin(5px auto);
+    background-color: $white;
+}
+
+
+// Nav
+.navigation-wrapper {
+    @include padding(65px null null null);
+    @include position(fixed, 0 null null 0);
+    @include size(100%);
+    background: rgba($black, .9);
+    z-index: 900;
+    display: none;
+}
+
+.navigation {
+    @include padding(20px 5% null 5%);
+    @include prefixer(display, none);
+    li {
+        list-style: none;
+        transition: all ease .6s;
+        &.small-padding {
+            @include margin(null null 10px null);
+        }
+        a {
+          @include padding(10px 0 10px 10px);
+          @include prefixer(transition, $trans-dur, $prefix-all);
+          display: block;
+          color: $medium-gray;
+          text-transform: $uppercase;
+          font-size: 150%;
+          letter-spacing: $letter-spacing;
+          border-left: 3px solid $black;
+            &:hover {
+                @include padding(null null null 2%);
+                color: $white;
+                border-color: $light-gray;
+            }
+        }
+    } 
+}
+
+
+.tb {
+    @include size(100%);
+    @include position(relative);
+    display: table;
+    .tb-cell {
+        @include size(auto, 100%);
+        @include margin(15px);
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.show-menu {
+    display: block;
+}
+
+
+#header-wrap {
+    @include size(100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+
+    .container {
+      height: 100%;
+      position: relative;
+      padding-bottom: 50px;
+    }
+
+    #header-slide {
+        @include position(absolute, 0 0 0 0);
+        @include margin(0);
+        z-index: -1;
+        .slider {
+          margin: 0;
+        }
+        .slide {
+            max-width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+        }
+        .item {
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: padding-box;
+        }
+
+        .owl-wrapper-outer,
+        .owl-wrapper,
+        .owl-item,
+        .item {
+            @include size(100%);
+            overflow: hidden;
+        }
+        .owl-controls {
+            z-index: 99;
+            .owl-pagination .owl-page.active span {
+                background: #101010;
+            }
+        }
+    }
+
+    .hero__logo {
+        margin: 10%;
+        max-height: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slick-prev,
+.slick-next {
+  @include size(50px);
+  z-index: 3;
+  &:before {
+    font-size: 48px;
+  }
+}
+
+.slick-prev {
+  left: 25px;
+}
+
+.slick-next {
+  right: 25px;
+}
+
+.slick-dots {
+    bottom: 60px;
+    z-index: 5;
+    li.slick-active button:before {
+      color: white;
+    }
+    li button:before {
+      font-size: 24px;
+      color: red
+    }
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+
+
+@media (max-width: 767px) {
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
