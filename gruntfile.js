@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     			preserveComments: 'all'
     		},
             files: {
-            'js/script.min.js': ['node_modules/jquery/dist/jquery.js', 'src/js/slick.js','src/js/scripts.js']
+            'js/script.min.js': ['node_modules/jquery/dist/jquery.js', 'src/js/slick.js', 'src/js/jquery.matchHeight.js', 'src/js/scripts.js']
             }
     	},
     },
