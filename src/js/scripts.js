@@ -1,13 +1,12 @@
 $(document).ready(function(){
  
-      var window_height = $(window).height(),
-        window_width = $(window).width(),
-        navigation_height;
+    var window_height = $(window).height(),
+    window_width = $(window).width(),
+    navigation_height;
 
 
 
       /* ============== SLIDERS ============== */
-
 
 
 
@@ -29,13 +28,12 @@ $(document).ready(function(){
 
       }).resize();
 
-
-
       /* ============== MENU ============== */
 
 
   $('#menulink').click(function(event) {
     event.preventDefault();
+    $('.hamburger-wrapper').toggleClass('open');
     if($('.navigation-wrapper').hasClass('show-menu')) {
       $('.navigation-wrapper').removeClass('show-menu');
       $('.navigation').hide();
