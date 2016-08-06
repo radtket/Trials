@@ -1,10 +1,41 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
+html,
+body {
+	box-sizing: border-box;
+  font-family: helvetica, arial, sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  @include outer-container(100%);
+  position: relative;
+}
+
+.row {
+  @include span-columns(12);
+}
+
+#wrapper {
+  @include position;
+}
+
+.table {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.table__cell {
+  display: table-cell;
+}
+
+.table__cell--middle {
+  vertical-align: middle;
+}
