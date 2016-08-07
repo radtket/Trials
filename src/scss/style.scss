@@ -1,25 +1,13 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "slick/slick";
+@import "slick/slick-theme";
 @import "base/base";
-@import "state";
 $visual-grid: true !global;
 $visual-grid-color: red !global;
 $visual-grid-index: front !global;
 
 
-
-
-
-
-
-
-.h2 {
-  letter-spacing: 2px;
-  line-height: 1.2;
-  margin-bottom: 4%;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #000000;
-}
 
 .trial_row {
   @include row(table);
@@ -35,6 +23,7 @@ $visual-grid-index: front !global;
   display: block;
   overflow: hidden;
   position: relative;
+
   &-ratio {
     @include span-columns(6);
     display: block;
@@ -62,6 +51,7 @@ $visual-grid-index: front !global;
   }
   .content-block__image {
     @include span-columns(6);
+
   }
   .content-block__text {
     @include span-columns(6);
@@ -107,50 +97,3 @@ Media Queries
 (min-resolution: 120dpi) {}
 
 
-/* ==========================================================================
-Helper classes
-========================================================================== */
-
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}

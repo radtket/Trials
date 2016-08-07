@@ -1,3 +1,7 @@
+html {
+  font-family: "Proxima Nova", "Helvetica", "Arial", sans-serif;
+}
+
 body {
   background: blue;
   color: $base-font-color;
@@ -37,17 +41,20 @@ h5 {
   font-size: modular-scale(1);
 }
 
+// Headlines
 
-html {
-  font-family: "Proxima Nova", "Helvetica", "Arial", sans-serif;
+.headline-keyline {
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 4%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #000000;
 }
 
 p {
   margin: 0 0 $small-spacing;
   font-weight: 400;
 }
-
-
 
 a {
   color: $action-color;

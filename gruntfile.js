@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
     watch : {
 	    options: {
-	      livereload: true,
+            livereload: true,
 	    },
     	js: {
     		files: ['src/js/**/*.js'], // <-- when these files change
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
     			'css/style.css'  :  'src/scss/style.scss'
     		}
     	}
-    } 
+    }
 
  
 
