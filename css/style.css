@@ -1,139 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'League Spartan';
-  src: url("../fonts/LeagueSpartan-Bold.eot");
-  src: url("../fonts/LeagueSpartan-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/LeagueSpartan-Bold.woff") format("woff"), url("../fonts/LeagueSpartan-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Deck';
-  src: url("../fonts/deck-bold-webfont.eot");
-  src: url("../fonts/deck-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/deck-bold-webfont.woff") format("woff"), url("../fonts/deck-bold-webfont.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Condensed"), url("AvenirNextLTPro-Cn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Demi';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Demi"), url("AvenirNextLTPro-Demi.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Demi Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Demi Condensed"), url("AvenirNextLTPro-DemiCn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Heavy Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Heavy Condensed"), url("AvenirNextLTPro-HeavyCn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Medium Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Medium Condensed"), url("AvenirNextLTPro-MediumCn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Regular"), url("AvenirNextLTPro-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Ultra Light Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Ultra Light Condensed"), url("AvenirNextLTPro-UltLtCn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Bold"), url("AvenirNextLTPro-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Bold Condensed';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Bold Condensed"), url("AvenirNextLTPro-BoldCn.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Bold Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Bold Condensed Italic"), url("AvenirNextLTPro-BoldCnIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Condensed Italic"), url("AvenirNextLTPro-CnIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Demi Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Demi Condensed Italic"), url("AvenirNextLTPro-DemiCnIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Demi Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Demi Italic"), url("AvenirNextLTPro-DemiIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Heavy Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Heavy Condensed Italic"), url("AvenirNextLTPro-HeavyCnIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Italic"), url("AvenirNextLTPro-It.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Medium Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Medium Condensed Italic"), url("AvenirNextLTPro-MediumCnIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Avenir Next LT Pro Ultra Light Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local("Avenir Next LT Pro Ultra Light Condensed Italic"), url("AvenirNextLTPro-UltLtCnIt.woff") format("woff");
-}
-
 html {
   box-sizing: border-box;
 }
@@ -443,6 +308,16 @@ body:before {
 /* ==========================================================================
 Helper classes
 ========================================================================== */
+.album-intro, .album-descr, .works-grid .work-intro, .works-grid .work-intro .work-descr {
+  text-align: center;
+}
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -549,7 +424,7 @@ textarea {
   font-size: 1em;
 }
 
-[type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple] {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -562,25 +437,25 @@ select[multiple] {
   width: 100%;
 }
 
-[type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover,
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
 select[multiple]:hover {
   border-color: #b1b1b1;
 }
 
-[type='color']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='email']:focus, [type='month']:focus, [type='number']:focus, [type='password']:focus, [type='search']:focus, [type='tel']:focus, [type='text']:focus, [type='time']:focus, [type='url']:focus, [type='week']:focus, input:not([type]):focus, textarea:focus,
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
 select[multiple]:focus {
   border-color: #1565c0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(18, 89, 169, 0.7);
   outline: none;
 }
 
-[type='color']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='email']:disabled, [type='month']:disabled, [type='number']:disabled, [type='password']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='text']:disabled, [type='time']:disabled, [type='url']:disabled, [type='week']:disabled, input:not([type]):disabled, textarea:disabled,
+input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
 select[multiple]:disabled {
   background-color: #f2f2f2;
   cursor: not-allowed;
 }
 
-[type='color']:disabled:hover, [type='date']:disabled:hover, [type='datetime']:disabled:hover, [type='datetime-local']:disabled:hover, [type='email']:disabled:hover, [type='month']:disabled:hover, [type='number']:disabled:hover, [type='password']:disabled:hover, [type='search']:disabled:hover, [type='tel']:disabled:hover, [type='text']:disabled:hover, [type='time']:disabled:hover, [type='url']:disabled:hover, [type='week']:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
 select[multiple]:disabled:hover {
   border: 1px solid #ddd;
 }
@@ -618,11 +493,17 @@ select {
 
 html,
 body {
-  box-sizing: border-box;
   font-family: helvetica, arial, sans-serif;
   height: 100%;
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  position: relative;
 }
 
 .container {
@@ -635,7 +516,7 @@ body {
 .container::after {
   clear: both;
   content: "";
-  display: block;
+  display: table;
 }
 
 .row {
@@ -647,10 +528,6 @@ body {
 
 .row:last-child {
   margin-right: 0;
-}
-
-#wrapper {
-  position: relative;
 }
 
 .table {
@@ -665,6 +542,364 @@ body {
 
 .table__cell--middle {
   vertical-align: middle;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+/*
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+*/
+.home-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.fullwidth-slideshow {
+  cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.fullwidth-slideshow-pager-wrap {
+  cursor: default;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 60px 0 20px 0;
+  z-index: 25;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.65)));
+  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.65));
+  background: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.65));
+  background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.65));
+  background: -ms-linear-gradient(top, transparent, rgba(0, 0, 0, 0.65));
+  background: linear-gradient(top, transparent, rgba(0, 0, 0, 0.65));
+  background-color: transparent;
+}
+
+.fullwidth-slideshow-pager {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 65.8807828007%;
+  margin-left: 17.0596085997%;
+}
+
+.fullwidth-slideshow-pager:last-child {
+  margin-right: 0;
+}
+
+.fsp-item {
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.fsp-item:active {
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -o-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.fsp-item img {
+  width: 100%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75);
+}
+
+.bg-scroll {
+  background-attachment: scroll !important;
+}
+
+.black-arrows .owl-prev,
+.black-arrows .owl-next {
+  color: #fff;
+}
+
+.black-arrows .owl-prev:before,
+.black-arrows .owl-next:before {
+  background: black;
+}
+
+.gallery-bottom {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  padding-top: 10px;
+}
+
+.album-grid {
+  margin: 0 0 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.album-item {
+  padding: 0 0 10px 10px;
+  height: auto;
+  width: 50%;
+  margin: 0;
+  float: left;
+}
+
+.album-item:hover .album-intro {
+  -webkit-transform: translateY(-99px);
+  -moz-transform: translateY(-99px);
+  -ms-transform: translateY(-99px);
+  -o-transform: translateY(-99px);
+  transform: translateY(-99px);
+  opacity: 1;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.album-item:hover .album-title {
+  color: #ccc;
+}
+
+.album-item:hover .album-descr {
+  color: #999;
+}
+
+.album-item:hover .album-img:after {
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.album-item:hover .album-img > img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.album-item:hover > a {
+  position: relative;
+  padding: 0;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.album-item:hover a,
+.album-item:hover a:hover {
+  color: #111;
+  border: none;
+}
+
+.album-intro {
+  height: 84px;
+  width: 100%;
+  padding: 20px 20px 0;
+  position: absolute;
+  bottom: -94px;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.album-title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0.8125em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+}
+
+.album-descr {
+  font-size: 0.6875em;
+  text-transform: uppercase;
+  color: #aaa;
+  line-height: 1.2;
+}
+
+.album-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.album-img:after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  content: " ";
+  display: block;
+  background: rgba(250, 250, 250, 0);
+}
+
+.album-img img {
+  width: 100%;
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  display: block;
+  overflow: hidden;
+}
+
+.works-grid {
+  margin: 0 0 0 -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.works-grid .work-item {
+  width: 50%;
+  margin: 0;
+  padding: 0 0 10px 10px;
+  float: left;
+}
+
+.works-grid .work-item:hover .work-intro {
+  /*bottom: auto;*/
+  /*top: 50%;*/
+  -webkit-transform: translateY(-99px);
+  -moz-transform: translateY(-99px);
+  -ms-transform: translateY(-99px);
+  -o-transform: translateY(-99px);
+  transform: translateY(-99px);
+  opacity: 1;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.works-grid .work-item:hover .work-title {
+  color: #ccc;
+}
+
+.works-grid .work-item:hover .work-descr {
+  color: #999;
+}
+
+.works-grid .work-item:hover .work-img > img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.works-grid .work-item:hover .work-img:after {
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.works-grid .work-item > a {
+  position: relative;
+  padding: 0 0 84px;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.works-grid .work-item a,
+.works-grid .work-item a:hover {
+  color: #111;
+  border: none;
+}
+
+.works-grid .work-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-grid .work-img:after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  background: rgba(250, 250, 250, 0);
+  content: " ";
+  display: block;
+}
+
+.works-grid .work-img img {
+  width: 100%;
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
+  display: block;
+  overflow: hidden;
+}
+
+.works-grid .work-intro {
+  height: 84px;
+  width: 100%;
+  padding: 20px 20px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  bottom: -94px;
+}
+
+.works-grid .work-intro .work-title {
+  margin: 0 0 8px;
+  padding: 0;
+  font-size: 0.8125em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+}
+
+.works-grid .work-intro .work-descr {
+  font-size: 0.6875em;
+  text-transform: uppercase;
+  color: #aaa;
+  line-height: 1.2;
 }
 
 #top,
@@ -967,7 +1202,6 @@ body {
   -moz-transition: all ease 0.3s;
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
-  transition: all ease 0.3s;
   display: block;
   color: #999;
   text-transform: uppercase;
@@ -1160,23 +1394,23 @@ h6 {
 }
 
 h1 {
-  font-size: 3.0517578125em;
+  font-size: 4.2087269129em;
 }
 
 h2 {
-  font-size: 2.44140625em;
+  font-size: 3.1573345183em;
 }
 
 h3 {
-  font-size: 1.953125em;
+  font-size: 2.368593037em;
 }
 
 h4 {
-  font-size: 1.5625em;
+  font-size: 1.776889em;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.333em;
 }
 
 .headline-keyline {

@@ -11,7 +11,7 @@ $visual-grid-index: front !global;
 
 .trial_row {
   @include row(table);
-  @include size(auto, 100%);
+  @include size(auto 100%);
   min-height: 768px;
 }
 
@@ -46,7 +46,7 @@ $visual-grid-index: front !global;
 @media only screen and (min-width: 768px) {
   .trial_row {
     @include row(table);
-    @include size(auto, 100%);
+    @include size(auto 100%);
     min-height: 768px;
   }
   .content-block__image {

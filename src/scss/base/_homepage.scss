@@ -10,23 +10,25 @@
 
 #top {
   @include position(fixed, 0 0 null 0);
-  @include size(auto, 15px);
+  @include size(auto 15px);
 }
 
 #right {
   @include position(fixed, 0 0 0 null);
-  @include size(15px, auto);
+  @include size(15px auto);
 }
 
 #bottom {
   @include position(fixed, null 0 0 0);
-  @include size(auto, 15px);
+  @include size(auto 15px);
 }
 
 #left {
   @include position(fixed, 0 null 0 0);
-  @include size(15px, auto);
+  @include size(15px auto);
 }
+
+
 
 
 #header-wrap {

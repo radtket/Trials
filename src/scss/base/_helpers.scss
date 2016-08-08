@@ -9,10 +9,67 @@ Helper classes
   transform: translateY(-50%);
 }
 
+// BEM selectors
+
+@mixin e($element) {
+  &-#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &_#{$modifier} {
+    @content;
+  }
+}
+
+// Generating :before or :after pseudo-element shapes
+
+@mixin p-el(
+  $el,
+  $el-w: null,
+  $el-h: null) {
+  @if $el == "before" or $el == "after" { 
+    &:#{$el} {
+      @extend %pseudos;
+      width: $el-w;
+      height: $el-h;
+      @content;
+    }
+  } 
+  @else {
+    @error "`#{$el}` is not a valid pseudo-element.";
+  }
+}
+
+
+// Center alignment
+
+%center-align {
+  text-align: center;
+}
+
+// For pseudo-elements
+
+%pseudos {
+  display: block;
+  content: ''; 
+  position: absolute;
+}
+
+// Center elements
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden;
 }
+
+// Hide Elements
 
 .visuallyhidden {
   border: 0;

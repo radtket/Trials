@@ -1,6 +1,7 @@
 // Hamburger Menu
 #menulink {
-  @include position(absolute, 35px null null 35px) @include padding(0) @include size(36px, 24px);
+  @include position(absolute, 35px null null 35px) @include padding(0)
+  @include size(36px 24px);
   z-index: 999;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -14,7 +15,7 @@
 
 .hamburger-wrapper {
   @include position(relative);
-  @include size(100%, 32px);
+  @include size(100% 32px);
   @include padding(8px null);
   div:nth-child(1) {
     top: 0px;
@@ -50,7 +51,7 @@
 }
 
 .hamburger {
-  @include size(100%, 4px);
+  @include size(100% 4px);
   background-color: $white;
   position: absolute;
   -webkit-transform: rotate(0deg);
@@ -98,7 +99,7 @@
 
 
 
-
+ 
 
 
 
@@ -119,7 +120,7 @@
 
 .navigation {
   @include padding(20px 5% null 5%);
-  @include prefixer(display, none);
+  display: none;
   li {
     list-style: none;
     transition: all ease .6s;
@@ -186,7 +187,7 @@
   @include position(relative);
   display: table;
   .tb-cell {
-    @include size(auto, 100%);
+    @include size(auto 100%);
     @include margin(15px);
     display: table-cell;
     text-align: center;

@@ -7,7 +7,11 @@
   <title>The HTML5 Herald</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+
+
+<link rel="stylesheet" href="css/slider-test/owl.carousel.css">
+<link rel="stylesheet" href="css/slider-test/owl.transitions.css">
+
   <link rel="stylesheet" href="css/style.css">
 
   <!--[if lt IE 9]>
@@ -16,35 +20,413 @@
 </head>
 
 <body>
+	<div class="page">
+
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="top"></div>
+		<div id="bottom"></div>
+
+		<a id="menulink" href="#">
+			<div class="hamburger-wrapper">
+				<div class="hamburger"></div>
+				<div class="hamburger"></div>
+				<div class="hamburger"></div>
+			</div>
+		</a>
+
+
+		<div class="navigation-wrapper">
+			<ul class="navigation">
+				<li class="active">
+					<a href="index.html#header-wrap">Home</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="index.html#works">Music</a>
+				</li>
+				<li>
+					<a href="index.html#contact">Gallery</a>
+				</li>
+				<li>
+					<a href="index.html#contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<!-- 
+		<header id="header-wrap">
+
+			<div id="header-slide" >
+				<div class="slide" style="background: url('img/parallax-1.jpg');"></div>
+				<div class="slide" style="background: url('img/parallax-2.jpg');"></div>
+			</div>
+
+
+			<div class="container">
+				<div class="tb">
+					<div class="tb-cell">
+						<img class="hero__logo" src="img/client__riffa--white.svg" alt="Krwn logo">
+					</div>
+				</div>
+			</div>
+
+
+		</header>
+		-->
+
+
+		<div class="relative">
+
+			<!-- Fullwidth Slider -->
+      <div class="home-section fullwidth-slideshow black-arrows">
+
+
+				<!-- Slide Item -->
+				<section class="home-section bg-scroll bg-dark" data-background="img/parallax-1.jpg">
+					<div class="js-height-full container"></div>
+				</section>
+				<!-- End Slide Item -->
+
+				<!-- Slide Item -->
+				<section class="home-section bg-scroll bg-dark" data-background="img/parallax-2.jpg">
+					<div class="js-height-full container"></div>
+				</section>
+				<!-- End Slide Item -->
+
+			</div>
+			<!-- END // Fullwidth Slider --> 
 
 
 
 
+			<div class="fullwidth-slideshow-pager-wrap">
 
+				<div class="container">
+					<div class="row">
 
-<div class="container_gal">
-<img src="http://placekitten.com/335/283" style="padding: 10px; margin: 5px" />
-	<img src="http://placekitten.com/325/596" />
-	<img src="http://placekitten.com/580/365" />
-	<img src="http://placekitten.com/282/581" />
-	<img src="http://placekitten.com/503/319" />
-	<img src="http://placekitten.com/549/577" />
-	<img src="http://placekitten.com/355/493" />
-	<img src="http://placekitten.com/500/150" />
-	<img src="http://placekitten.com/360/529" />
-	<img src="http://placekitten.com/589/361" />
-	<img src="http://placekitten.com/452/462" />
-	<img src="http://placekitten.com/550/304" />
-	<img src="http://placekitten.com/352/204" />
-	<img src="http://placekitten.com/400/220" />
-	
-	
+						<div class="fullwidth-slideshow-pager">
+
+							<!-- Item -->
+							<div class="fsp-item">
+								<img src="img/photographer-9-thumb.jpg" alt="" />
+							</div>
+							<!-- End Item -->
+
+							<!-- Item -->
+							<div class="fsp-item">
+								<img src="img/photographer-9-thumb.jpg" alt="" />
+							</div>
+							<!-- End Item -->
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			<!-- END // Slider Pager --> 
+
 	</div>
+	<!-- END // .relative --> 
 
 
 
 
+
+
+<!-- /*/  Bottom Galley  \*\ -->
+<section class="gallery-bottom">
+
+
+
+  <ul class="album-grid">
+
+    <!-- Work Item -->
+    <li class="album-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="album-img">
+                <img src="img/photographer-1-preview.jpg" alt="album" />
+            </div>
+            <div class="album-intro">
+                <h3 class="album-title">Album 1</h3>
+                <div class="album-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+    <!-- Work Item -->
+    <li class="album-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="album-img">
+                <img src="img/photographer-1-preview.jpg" alt="album" />
+            </div>
+            <div class="album-intro">
+                <h3 class="album-title">Album 1</h3>
+                <div class="album-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+  </ul>
+
+  <!-- Works Grid -->
+  <ul class="works-grid clearfix ">
+
+    <!-- Work Item -->
+    <li class="work-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="work-img">
+                <img src="img/photographer-1-preview.jpg" alt="Work" />
+            </div>
+            <div class="work-intro">
+                <h3 class="work-title">Album 1</h3>
+                <div class="work-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+    <!-- Work Item -->
+    <li class="work-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="work-img">
+                <img src="img/photographer-1-preview.jpg" alt="Work" />
+            </div>
+            <div class="work-intro">
+                <h3 class="work-title">Album 1</h3>
+                <div class="work-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+    <!-- Work Item -->
+    <li class="work-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="work-img">
+                <img src="img/photographer-1-preview.jpg" alt="Work" />
+            </div>
+            <div class="work-intro">
+                <h3 class="work-title">Album 1</h3>
+                <div class="work-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+    <!-- Work Item -->
+    <li class="work-item mix photography">
+        <a href="special-photographer-1-portfolio.html">
+            <div class="work-img">
+                <img src="img/photographer-1-preview.jpg" alt="Work" />
+            </div>
+            <div class="work-intro">
+                <h3 class="work-title">Album 1</h3>
+                <div class="work-descr">
+                    10 Photos
+                </div>
+            </div>
+        </a>
+    </li>
+    <!-- End Work Item -->
+
+  </ul>
+  <!-- END // Works Grid -->
+
+</section>
+<!-- END /*/  Bottom Galley  \*\ -->
+
+
+
+
+		
+	</div>
+	<!-- / #wrapper end -->
 
   <script src="js/script.min.js"></script>
+
+	<script src="js/slider-test/owl.carousel.min.js"></script>
+
+ <script>
+
+// Sections backgrounds
+
+    $(document).ready(function(){
+        
+        $(window).trigger("resize");            
+        initPageSliders();
+    });
+
+$(window).resize(function(){
+	js_height_init();
+});
+
+    // Sections backgrounds
+    
+    var pageSection = $(".home-section, .page-section, .small-section, .split-section");
+    pageSection.each(function(indx){
+        
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+
+        // Function for block height 100%
+    function height_line(height_object, height_donor){
+        height_object.height(height_donor.height());
+        height_object.css({
+            "line-height": height_donor.height() + "px"
+        });
+    }
+
+
+
+
+
+
+/* ---------------------------------------------
+ Height 100%
+ --------------------------------------------- */
+function js_height_init(){
+    (function($){
+        $(".js-height-full").height($(window).height());
+        $(".js-height-parent").each(function(){
+            $(this).height($(this).parent().first().height());
+        });
+    })(jQuery);
+}
+
+
+
+
+
+
+
+function initPageSliders(){
+    (function($){
+        "use strict";
+
+        // Fullwidth slideshow
+        
+          var sync1 = $(".fullwidth-slideshow");
+          var sync2 = $(".fullwidth-slideshow-pager");
+  
+        $(".fullwidth-slideshow").owlCarousel({
+            autoPlay: 5000,
+            stopOnHover: true,
+            transitionStyle: "fade",
+            slideSpeed: 350,
+            singleItem: true,
+            autoHeight: true,
+            pagination: false,
+            navigation: true,
+            navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            afterAction : syncPosition,
+            responsiveRefreshRate : 200
+        });
+        $(".fullwidth-slideshow-pager").owlCarousel({
+            autoPlay: 5000,
+            stopOnHover: true,
+            items: 8,
+            itemsDesktop: [1199,8],
+            itemsDesktopSmall: [979,7],
+            itemsTablet: [768,6],
+            itemsMobile: [480,4],
+            autoHeight: true,
+            pagination: false,
+            navigation: false,
+            responsiveRefreshRate : 100,
+            afterInit : function(el){
+              el.find(".owl-item").eq(0).addClass("synced");
+            }
+        });
+        
+        function syncPosition(el){
+            var current = this.currentItem;
+            $(".fullwidth-slideshow-pager").find(".owl-item").removeClass("synced").eq(current).addClass("synced")
+            if ($(".fullwidth-slideshow-pager").data("owlCarousel") !== undefined) {
+                center(current)
+            }
+        }
+        
+        $(".fullwidth-slideshow-pager").on("click", ".owl-item", function(e){
+            e.preventDefault();
+            var number = $(this).data("owlItem");
+            sync1.trigger("owl.goTo", number);
+        });
+ 
+        function center(number){
+            var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+            var num = number;
+            var found = false;
+            for (var i in sync2visible) {
+                if (num === sync2visible[i]) {
+                    var found = true;
+                }
+            }
+            if (found === false) {
+                if (num > sync2visible[sync2visible.length - 1]) {
+                    sync2.trigger("owl.goTo", num - sync2visible.length + 2)
+                }
+                else {
+                    if (num - 1 === -1) {
+                        num = 0;
+                    }
+                    sync2.trigger("owl.goTo", num);
+                }
+            }
+            else 
+                if (num === sync2visible[sync2visible.length - 1]) {
+                    sync2.trigger("owl.goTo", sync2visible[1])
+                }
+                else 
+                    if (num === sync2visible[0]) {
+                        sync2.trigger("owl.goTo", num - 1)
+                    }
+        }
+          
+        var owl = $(".fullwidth-slideshow").data("owlCarousel");
+        
+        $(document.documentElement).keyup(function(event){
+            // handle cursor keys
+            if (event.keyCode == 37) {
+                owl.prev();
+            }
+            else 
+                if (event.keyCode == 39) {
+                    owl.next();
+                }
+        });
+        
+        if ($(".owl-carousel").length) {
+            var owl = $(".owl-carousel").data('owlCarousel');
+            owl.reinit();
+        }
+
+    })(jQuery);
+};
+
+
+
+</script>
+
+
 </body>
 </html>
