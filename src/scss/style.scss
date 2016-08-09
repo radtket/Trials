@@ -1,7 +1,9 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
-@import "slick/slick";
-@import "slick/slick-theme";
+@import "vendor/owl-carousel/owl.carousel";
+@import "vendor/owl-carousel/owl.transitions";
+// @import "slick/slick";
+// @import "slick/slick-theme";
 @import "base/base";
 $visual-grid: true !global;
 $visual-grid-color: red !global;
