@@ -1,31 +1,5 @@
-fieldset {
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
 
-legend {
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
-  padding: 0;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: $small-spacing / 2;
-}
-
-input,
-select,
-textarea {
-  display: block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-}
-
-#{$all-text-inputs},
+/* #{$all-text-inputs},
 select[multiple] {
   background-color: $base-background-color;
   border: $base-border;
@@ -56,28 +30,65 @@ select[multiple] {
     }
   }
 }
+*/
+
+%form_font {
+  font-size: (12px);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+  border: 2px solid rgba($black, 0.1);
+  outline: none;
+  padding: 6px 13px;
+  vertical-align: middle;
+  font-family: inherit;
+
+  // Vendor Prefiix Needed?
+  border-radius: 0;
+
+  // Vendor Prefiix Needed?
+  box-shadow: none;
+
+  width: 100%;
+  background-image: none;
+  background-color: #fff;
+
+  &:hover {
+    border-color: rgba($black, .3);
+  }
+
+  &:focus {
+    color: #111;
+    border-color: rgba($black, .9);
+    outline: none;
+
+    // Vendor Prefiix Needed?
+    box-shadow: 0 0 3px rgba(0,0,0, .3);
+  }
+}
+
+
+.form {
+  margin: 20px auto;
+  > div {
+    margin-bottom: 15px;
+  }
+
+input {
+  @extend %form_font;
+  display: inline-block;
+  height: 37px;
+
+  // Vendor Prefiix Needed?
+  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
 
 textarea {
-  resize: vertical;
+  @extend %form_font;
+  height: auto;
+  display: block;
+  padding: 6px 12px;
 }
 
-[type="search"] {
-  appearance: none;
-}
-
-[type="checkbox"],
-[type="radio"] {
-  display: inline;
-  margin-right: $small-spacing / 2;
-}
-
-[type="file"] {
-  margin-bottom: $small-spacing;
-  width: 100%;
-}
-
-select {
-  margin-bottom: $small-spacing;
-  max-width: 100%;
-  width: auto;
 }
