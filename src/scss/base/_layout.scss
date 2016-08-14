@@ -474,21 +474,6 @@ body {
 
 
 
-.simple-article {
-  font-size: 14px;
-  line-height: 24px;
-  color: #222;
-}
-
-.simple-article.small {
-  font-size: 13px;
-  line-height: 24px;
-}
-
-.simple-article.large {
-  font-size: 15px;
-  line-height: 24px;
-}
 
 
 
@@ -529,78 +514,6 @@ body {
 
 
 
-/*mouseover*/
-
-.mouseover {
-  overflow: hidden;
-  background-position: center top;
-  background-size: cover;
-}
-
-.mouseover:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-  background: rgba(0, 0, 0, 0);
-}
-
-.mouseover:hover:after {
-  background: rgba(0, 0, 0, .4);
-}
-
-.mouseover:hover:before {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  opacity: 1;
-}
-
-.mouseover-helper-frame {
-  position: absolute;
-  z-index: 1;
-  top: 40px;
-  right: 40px;
-  bottom: 40px;
-  left: 40px;
-  opacity: 0;
-}
-
-.mouseover:hover .mouseover-helper-frame {
-  opacity: 1;
-}
-
-.mouseover-helper-frame:before,
-.mouseover-helper-frame:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  content: '';
-  border: 1px rgba(255, 255, 255, .4) solid;
-}
-
-.mouseover:hover .mouseover-helper-frame:before,
-.mouseover:hover .mouseover-helper-frame:after {
-  width: 100%;
-  height: 100%;
-}
-
-.mouseover-helper-frame:before {
-  bottom: 0;
-  left: 0;
-  border-top-color: transparent;
-  border-right-color: transparent;
-}
-
-.mouseover-helper-frame:after {
-  top: 0;
-  right: 0;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-
-
 
 
 
@@ -616,13 +529,6 @@ body {
     left: 0;
     width: 50%;
     height: 100%;
-    .mouseover:after {
-      background: rgba(0, 0, 0, .4);
-    }
-
-    .mouseover:hover:after {
-      background: rgba(0, 0, 0, .6);
-    }
 
     .valign-text-wrapper {
       position: relative;
@@ -652,22 +558,6 @@ body {
       //  padding-left: 110px;
       width: 100%;
       padding: 15%;
-
-      h2 {
-        margin-bottom: 40px;
-        display: inline-block;
-        position: relative;
-        &:after {
-          display: block;
-          content: '';
-          position: absolute;
-          width: 125%;
-          height: 6px;
-          background: #b6944c;
-          bottom: -10px;
-          left: 0;
-        }
-      }
     }
 
     .avatar-wrapper {
@@ -772,13 +662,6 @@ body {
         width: auto;
         margin: 0 auto;
         text-align: center;
-        h2 {
-          &:after {
-            width: 260px;
-            left: 50%;
-            margin-left: -130px;
-          }
-        }
       }
       .cell-view {
         display: block;
@@ -789,6 +672,10 @@ body {
 
     .middle-wrapper {
       top: 500px;
+    }
+
+    .divider {
+      margin: 20px auto;
     }
 
   }
@@ -921,3 +808,5 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+
+
