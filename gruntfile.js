@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         uglify: {
             // doesnt need to be called build, we can call it whatever we want 
             build: {
-                src: ['node_modules/jquery/dist/jquery.js', 'src/js/owl.carousel.min.js', 'src/js/jquery.matchHeight.js', 'src/js/scripts.js'],
+                src: ['node_modules/jquery/dist/jquery.js', 'src/js/owl.carousel.min.js', 'src/js/covervid.js', 'src/js/jquery.matchHeight.js', 'src/js/scripts.js'],
                 dest: 'js/script.min.js'
             },
 
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['node_modules/jquery/dist/jquery.js', 'src/js/owl.carousel.min.js', 'src/js/jquery.matchHeight.js', 'src/js/scripts.js'],
+                src: ['node_modules/jquery/dist/jquery.js', 'src/js/owl.carousel.min.js', 'src/js/covervid.js', 'src/js/jquery.matchHeight.js', 'src/js/scripts.js'],
                 dest: 'js/script.min.js'
             }   
         },
