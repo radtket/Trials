@@ -1,27 +1,4 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
-@import "vendor/owl-carousel/owl.carousel";
-@import "vendor/owl-carousel/owl.transitions";
+@import "../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat";
 @import "base/base";
-$visual-grid: true !global;
-$visual-grid-color: red !global;
-$visual-grid-index: front !global;
-
-
-
-
-
-
-
-
-/* ==========================================================================
-Media Queries
-========================================================================== */
-
-
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {}
-
-
+$output-bourbon-deprecation-warnings: false;

@@ -4,125 +4,87 @@
 #bottom,
 #left,
 #right {
-  background: $white;
-  z-index: 9999999999999999;
+	background: $white;
+	z-index: 9999999999999999;
 }
 
 #top {
-  @include position(fixed, 0 0 null 0);
-  @include size(auto 15px);
+	@include position(fixed, 0 0 null 0);
+	@include size(auto 15px);
 }
 
 #right {
-  @include position(fixed, 0 0 0 null);
-  @include size(15px auto);
+	@include position(fixed, 0 0 0 null);
+	@include size(15px auto);
 }
 
 #bottom {
-  @include position(fixed, null 0 0 0);
-  @include size(auto 15px);
+	@include position(fixed, null 0 0 0);
+	@include size(auto 15px);
 }
 
 #left {
-  @include position(fixed, 0 null 0 0);
-  @include size(15px auto);
+	@include position(fixed, 0 null 0 0);
+	@include size(15px auto);
 }
-
-
-
 
 #header-wrap {
-  @include size(100%);
-  height: 100vh !important;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  z-index: 1;
-  .container {
-    height: 100vh;
-    position: relative;
-    padding-bottom: 50px;
-  }
-  #header-slide {
-    @include position(absolute, 0 0 0 0);
-    @include margin(0);
-    .slider {
-      margin: 0;
-    }
-    .slide {
-      max-width: 100%;
-      height: 100vh;
-      text-align: center;
-      background-position: center center !important;
-      background-size: cover !important;
-      background-repeat: no-repeat !important;
-    }
-    .item {
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-origin: padding-box;
-    }
-    .owl-wrapper-outer,
-    .owl-wrapper,
-    .owl-item,
-    .item {
-      @include size(100%);
-      overflow: hidden;
-    }
-    .owl-controls {
-      z-index: 99;
-      .owl-pagination .owl-page.active span {
-        background: #101010;
-      }
-    }
-  }
-  .hero__logo {
-    margin: 10%;
-    max-height: 150px;
-  }
-}
+	@include size(100%);
+	height: 100vh !important;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	z-index: 1;
 
+	.container {
+		height: 100vh;
+		padding-bottom: 50px;
+		position: relative;
+	}
 
+	#header-slide {
+		@include position(absolute, 0 0 0 0);
+		@include margin(0);
 
+		.slider {
+			margin: 0;
+		}
 
-.slick-prev,
-.slick-next {
-  @include size(50px);
-  z-index: 3;
-  &:before {
-    font-size: 48px;
-  }
-}
+		.slide {
+			background-position: center center !important;
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			height: 100vh;
+			max-width: 100%;
+			text-align: center;
+		}
 
-.slick-prev {
-  left: 25px;
-}
+		.item {
+			background-origin: padding-box;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 
-.slick-next {
-  right: 25px;
-}
+		.owl-wrapper-outer,
+		.owl-wrapper,
+		.owl-item,
+		.item {
+			@include size(100%);
+			overflow: hidden;
+		}
 
-.slick-dots {
-  bottom: 60px;
-  z-index: 5;
-  li.slick-active button:before {
-    color: white;
-  }
-  li button:before {
-    font-size: 24px;
-    color: red
-  }
-}
+		.owl-controls {
+			z-index: 99;
 
+			.owl-pagination .owl-page.active span {
+				background: #101010;
+			}
+		}
+	}
 
-
-
-
-
-@media (max-width: 767px) {
-  .slick-prev,
-  .slick-next {
-    display: none !important;
-  }
+	.hero__logo {
+		margin: 10%;
+		max-height: 150px;
+	}
 }

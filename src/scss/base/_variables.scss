@@ -17,8 +17,14 @@ $largedesktop: new-breakpoint(min-width $largedesktop-size 16);
 
 
 // Typography
-$base-font-family: $font-stack-roboto;
-$heading-font-family: $font-stack-avenier-regular;
+$base-font-family: "Roboto",
+sans-serif;
+;
+$heading-font-family: "Muli",
+sans-serif;
+
+$alt-font: "League Spartan";
+
 
 // Font Sizes
 $base-font-size: 1em;
@@ -37,11 +43,11 @@ $letter-spacing: 2px;
 
 // Colors
 $blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$dark-gray: #333333;
+$medium-gray: #999999;
+$light-gray: #dddddd;
 $white: #ffffff;
-$black: #000;
+$black: #000000;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -52,12 +58,13 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
+$base-background-color: $white;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
+$form-box-shadow-focus: $form-box-shadow,
+0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 // Animations
 $base-duration: 150ms;
@@ -68,6 +75,19 @@ $prefix-all: ("webkit", "moz", "ms", "o");
 
 %nav-active {
 	@include padding(null null null 2%);
-	color: $white;
 	border-color: $light-gray;
+	color: $white;
+}
+
+@font-face {
+	font-family: "League Spartan";
+	src: url("../fonts/leaguespartan-bold.eot");
+	src: url("../fonts/leaguespartan-bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/leaguespartan-bold.woff2") format("woff2"),
+		url("../fonts/leaguespartan-bold.woff") format("woff"),
+		url("../fonts/leaguespartan-bold.ttf") format("truetype"),
+		url("../fonts/leaguespartan-bold.svg#league_spartanbold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+
 }

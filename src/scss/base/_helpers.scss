@@ -2,110 +2,112 @@
 Helper classes
 ========================================================================== */
 @mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+	position: $position;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 // BEM selectors
 
 @mixin e($element) {
-  &-#{$element} {
-    @content;
-  }
+	&-#{$element} {
+		@content;
+	}
 }
+
 @mixin m($modifier) {
-  &_#{$modifier} {
-    @content;
-  }
+	&_#{$modifier} {
+		@content;
+	}
 }
 
 // Generating :before or :after pseudo-element shapes
 
-@mixin p-el(
-  $el,
-  $el-w: null,
-  $el-h: null) {
-  @if $el == "before" or $el == "after" { 
-    &:#{$el} {
-      @extend %pseudos;
-      width: $el-w;
-      height: $el-h;
-      @content;
-    }
-  } 
-  @else {
-    @error "`#{$el}` is not a valid pseudo-element.";
-  }
+@mixin p-el($el,
+$el-w: null,
+$el-h: null) {
+	@if $el=="before"or $el=="after" {
+		&:#{$el} {
+			@extend %pseudos;
+			height: $el-h;
+			width: $el-w;
+			@content;
+		}
+	}
+
+	@else {
+		@error "`#{$el}` is not a valid pseudo-element.";
+	}
 }
 
 
 // Center alignment
 
 %center-align {
-  text-align: center;
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
 }
 
 // For pseudo-elements
 
 %pseudos {
-  display: block;
-  content: ''; 
-  position: absolute;
+	content: "";
+	display: block;
+	position: absolute;
 }
 
 // Center elements
 
 .centered {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hidden {
-  display: none !important;
-  visibility: hidden;
+	display: none !important;
+	visibility: hidden;
 }
 
 // Hide Elements
 
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
 }
 
 .invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
+	visibility: hidden;
 }
 
 .clearfix {
-  *zoom: 1;
+
+	&::before,
+	&::after {
+		content: " ";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
 }

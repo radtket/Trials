@@ -1,67 +1,60 @@
 // Hamburger Menu
 #menulink {
-  @include position(absolute, 35px null null 35px) @include padding(0)
-  @include size(36px 24px);
-  z-index: 999;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+	@include position(absolute, 35px null null 35px);
+	@include padding(0);
+	@include size(36px 24px);
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	z-index: 999;
 }
 
 .hamburger-wrapper {
-  @include position(relative);
-  @include size(100% 32px);
-  @include padding(8px null);
-  div:nth-child(1) {
-    top: 0px;
-  }
-  div:nth-child(2) {
-    top: 10px;
-  }
-  div:nth-child(3) {
-    top: 20px;
-  }
-  &.open {
-    > div {
-      background-color: $white;
-    }
-    div:nth-child(1) {
-      top: 16px;
-      width: 26px;
-      left: 5px;
-    }
-    div:nth-child(2) {
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      transform: rotate(90deg);
-    }
-    div:nth-child(3) {
-      top: 3px;
-      transform: rotate(30deg);
-      width: 18px;
-      left: 10px;
-    }
-  }
+	@include position(relative);
+	@include size(100% 32px);
+	@include padding(8px null);
+
+	div:nth-child(1) {
+		top: 0;
+	}
+
+	div:nth-child(2) {
+		top: 10px;
+	}
+
+	div:nth-child(3) {
+		top: 20px;
+	}
+
+	&.open {
+		>div {
+			background-color: $white;
+		}
+
+		div:nth-child(1) {
+			left: 5px;
+			top: 16px;
+			width: 26px;
+		}
+
+		div:nth-child(2) {
+			transform: rotate(90deg);
+		}
+
+		div:nth-child(3) {
+			left: 10px;
+			top: 3px;
+			transform: rotate(30deg);
+			width: 18px;
+		}
+	}
 }
 
 .hamburger {
-  @include size(100% 4px);
-  background-color: $white;
-  position: absolute;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+	@include size(100% 4px);
+	background-color: $white;
+	position: absolute;
+	transform: rotate(0deg);
+	transition: .25s ease-in-out;
 }
 
 
@@ -69,37 +62,36 @@
 // Navbar White - About Section
 
 .nav-bar {
-  background: $white;
-  height: 100px;
-  border-bottom: 1px solid #e8e8e8;
+	background: $white;
+	border-bottom: 1px solid #e8e8e8;
+	height: 100px;
 
-  .hamburger {
-    background-color: $black;
-  }
-  
+	.hamburger {
+		background-color: $black;
+	}
+
 }
 
 #nav-brand {
-  @include vertical-align();
-  border: 2px solid $black;
-  text-align: center;
-  display: inline-block;
-  left: 50%;
-  height: 55px;
-  width: 55px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  img {
-    @include vertical-align();
-    width: 39px;
-    height: 25px;
-  }
+	@include vertical-align();
+	border: 2px solid $black;
+	display: inline-block;
+	height: 55px;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	width: 55px;
+
+	img {
+		@include vertical-align();
+		height: 25px;
+		width: 39px;
+	}
 }
 
 
 
- 
+
 
 
 
@@ -110,40 +102,45 @@
 // Full-Screen Navigation
 
 .navigation-wrapper {
-  @include padding(65px null null null);
-  @include position(fixed, 0 null null 0);
-  @include size(100%);
-  background: rgba($black, .9);
-  z-index: 900;
-  display: none;
+	@include padding(65px null null null);
+	@include position(fixed, 0 null null 0);
+	@include size(100%);
+	background: rgba($black, .9);
+	z-index: 900;
+	display: none;
 }
 
 .navigation {
-  @include padding(20px 5% null 5%);
-  display: none;
-  li {
-    list-style: none;
-    transition: all ease .6s;
-    &.small-padding {
-      @include margin(null null 10px null);
-    }
-    &.active > a {
-      @extend %nav-active;
-    }
-    a {
-      @include padding(10px 0 10px 10px);
-      @include prefixer(transition, $trans-dur, $prefix-all);
-      display: block;
-      color: $medium-gray;
-      text-transform: $uppercase;
-      font-size: 150%;
-      letter-spacing: $letter-spacing;
-      border-left: 3px solid $black;
-      &:hover {
-        @extend %nav-active;
-      }
-    }
-  }
+	@include padding(20px 5% null 5%);
+	display: none;
+
+	li {
+		list-style: none;
+		transition: all ease .6s;
+
+		&.small-padding {
+			@include margin(null null 10px null);
+		}
+
+		&.active>a {
+			@extend %nav-active;
+		}
+
+		a {
+			@include padding(10px 0 10px 10px);
+			@include prefixer(transition, $trans-dur, $prefix-all);
+			display: block;
+			color: $medium-gray;
+			text-transform: $uppercase;
+			font-size: 150%;
+			letter-spacing: $letter-spacing;
+			border-left: 3px solid $black;
+
+			&:hover {
+				@extend %nav-active;
+			}
+		}
+	}
 }
 
 
@@ -175,7 +172,7 @@
 
 
 .show-menu {
-  display: block;
+	display: block;
 }
 
 
@@ -183,20 +180,15 @@
 
 
 .tb {
-  @include size(100%);
-  @include position(relative);
-  display: table;
-  .tb-cell {
-    @include size(auto 100%);
-    @include margin(15px);
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-  }
+	@include size(100%);
+	@include position(relative);
+	display: table;
+
+	.tb-cell {
+		@include size(auto 100%);
+		@include margin(15px);
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
 }
-
-
-
-
-
-
